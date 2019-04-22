@@ -124,3 +124,84 @@ JSON.stringify(foo, null, '--');
   ```
 
 * 值为 undefined, symbol, function 的属性会被忽略
+
+
+
+
+
+### 监听屏幕旋转 orientationchange
+
+这个 `API` 可以将你手机是否横屏的情况暴露给需要知道的人知道。
+
+```js
+screenOrientation: function(){
+    let self = this;
+    let orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+        self.angle = orientation.angle;
+    });
+}
+```
+
+其中，angle 的值：
+
+0 竖屏 90 向左横屏 -90/270 向右横屏 180 倒屏
+
+
+
+
+
+### 电池状态 navigator.getBattery()
+
+ 这个 `API` 可以将你手机电池状态的情况暴露给需要知道的人知道。
+
+这个 `api` 返回的是一个 `promise` 对象，会给出一个 `BatteryManager` 对象，对象中包含了以下信息：
+
+```js
+getBatteryInfo: function(){
+    let self = this;
+    if(navigator.getBattery){
+        navigator.getBattery().then(function(battery) {
+            // 判断是否在充电
+            self.batteryInfo = battery.charging ? `在充电 : 剩余 ${battery.level * 100}%` : `没充电 : 剩余 ${battery.level * 100}%`;
+            // 电池充电状态改变事件
+            battery.addEventListener('chargingchange', function(){
+                self.batteryInfo = battery.charging ? `在充电 : 剩余 ${battery.level * 100}%` : `没充电 : 剩余 ${battery.level * 100}%`;
+            });
+        });
+    }else{
+        self.batteryInfo = '不支持电池状态接口';
+    }
+}
+```
+
+
+
+### 震动 window.navigator.vibrate(200)
+
+这个 `API` 可以让你的手机按你的想法震动。
+
+```js
+vibrateFun: function(){
+    let self = this;
+    if( navigator.vibrate ){
+        navigator.vibrate([500, 500, 500, 500, 500, 500, 500, 500, 500, 500]);
+    }else{
+        self.vibrateInfo = "您的设备不支持震动";
+    }
+    <!--
+    // 清除震动 
+    navigator.vibrate(0);
+    // 持续震动
+    setInterval(function() {
+        navigator.vibrate(200);
+    }, 500);
+    -->
+},
+```
+
+
+
+### 网络状态
+
+通过 `window.addEventListener` 对 `online` 和 `offline` 事件的监听，可以获知当前设备联网状态。
