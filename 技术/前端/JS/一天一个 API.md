@@ -205,3 +205,25 @@ vibrateFun: function(){
 ### 网络状态
 
 通过 `window.addEventListener` 对 `online` 和 `offline` 事件的监听，可以获知当前设备联网状态。
+
+
+
+
+
+### Object.getOwnPropertySymbols(obj)
+
+ES6 引入了 Symbol，对象属性可以设置 Symbol 作为为 key 名，不过 `Object.getOwnPropertyNames()` 就获取不到此类键名，因此引入了 `Object.getOwnPropertySymbols()` 用于获取此类键名。
+
+
+
+### Reflect.ownKeys()
+
+ES 新引入的 API，用于获取对象所有的属性名（包括字符串键名和 Symbol 键名），同时包含了不可遍历的属性名。
+
+
+
+### 对象遍历顺序规则
+
+- 首先遍历所有数值键，按照数值升序排列。
+- 其次遍历所有字符串键，按照加入时间升序排列。
+- 最后遍历所有 Symbol 键，按照加入时间升序排列。
