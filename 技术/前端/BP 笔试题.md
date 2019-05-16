@@ -65,11 +65,15 @@ console.log(foo.x);
 
 
 
-call, apply, bind 的区别？
-
-
-
 window.onload 与 document.onDOMContentLoaded 的区别？
+
+
+
+实现一个日期工具函数（datetool），达到以下效果
+
+```js
+datetool(new Date()).format('YYYY-MM-DD H:mm:ss'); // 2019-05-16 9:12:30
+```
 
 
 
