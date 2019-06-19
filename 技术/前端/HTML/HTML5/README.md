@@ -39,16 +39,33 @@ HTML5 带来了什么？
 
 ### 多媒体
 
-audio, video, source, track
+- `<audio>`
+- `<video>`
+- `<source>`
+- `<track>`, WebVTT
 
 
 
 ### 性能
 
-Web Worker, XMLHttpRequest 2, Fetch
+- Web Worker
+- XMLHttpRequest 2
+- Fetch
+- requestAnimationFrame
 
 
 
 ### 存储
 
-localStorage, sessionStorage, IndexDB
+- localStorage,
+- sessionStorage,
+- IndexDB
+
+
+
+### 其他特性
+
+- 拖拽
+- 地理定位
+- 设备方向检测
+- 触摸
