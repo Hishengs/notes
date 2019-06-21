@@ -64,6 +64,12 @@
 
 
 
+#### window.getSelection
+
+>  返回一个 [`Selection`](https://developer.mozilla.org/en-US/docs/Web/API/Selection) 对象，通过 toString() 可得到选中的文本值
+
+
+
 ### 事件
 
 
