@@ -87,21 +87,86 @@ Number 既可以当作普通函数，也可以通过 `new` 操作符作为构造
 
 ### 静态方法
 
-- `Number.isFinite()`
-- `Number.isInteger()`
-- `Number.isNaN()`
-- `Number.isSafeInteger()`
-- `Number.parseFloat()`
-- `Number.parseInt()`
+- `Number.isFinite(val)`
+
+  > 判断给定的值是否是 **有穷数**
+  >
+  > 注意：此方法不会将给定的非数值转化为数值
+
+- `Number.isInteger(val)`
+
+  > 判断给定的值是否是整型
+
+- `Number.isNaN(val)`
+
+  > 判断给定的值是否是不合法的数字
+  >
+  > `NaN` 代表 Not A Number 的意思
+
+- `Number.isSafeInteger(val)`
+
+  > 判断给定的整数是否在安全范围内
+  >
+  > 安全整数范围为 `-(2^53 - 1)到` `2^53 - 1 `之间的整数，包含 `-(2^53 - 1)和` `2^53 - 1`。
+
+- `Number.parseFloat(val)`
+
+  > 将给定的值转换为浮点数，如果无法解析，返回 NaN
+  >
+  > 注意：
+  >
+  > - 参数如果是原始值，只接受数值或者字符串，其他一概返回 NaN
+  > - 参数如果是对象，如果定义了 `toString()` 方法，则调用此方法获得字符串再尝试解析
+
+- `Number.parseInt(val)`
+
+  > 将给定的值转换为整数，如果无法解析，返回 NaN
+  >
+  > 注意：
+  >
+  > - 参数如果是原始值，只接受数值或者字符串，其他一概返回 NaN
+  > - 参数如果是对象，如果定义了 `toString()` 方法，则调用此方法获得字符串再尝试解析
 
 
 
 ### 实例方法
 
-- `Number.toExponential()`
-- `Number.toFixed()`
+- `Number.toExponential([fractionDigits])`
+
+  > 以指数表示法返回该数值字符串表示形式
+  >
+  > `fractionDigits` 可选。一个整数，用来指定小数点后有几位数字。
+  >
+  > ```js
+  > var numObj = 77.1234;
+  > numObj.toExponential(); // "7.71234e+1"
+  > numObj.toExponential(2); // "7.71e+1"
+  > ```
+
+- `Number.toFixed(digits)`
+
+  > 使用定点表示法来格式化一个数值
+  >
+  > `digits` 小数点后数字的个数；介于 0 到 20 （包括）之间，实现环境可能支持更大范围。如果忽略该参数，则默认为 0。
+  >
+  > 注意：此方法会对后一位进行 **四舍五入** 再取值
+
 - `Number.toLocaleString()`
+
+  > 等同于 `Number.toString()`
+
 - `Number.toString()`
-- `Number.toPrecision()`
-- `Number.toSource()`
+
+  > 返回数值的字符串形式
+
+- `Number.toPrecision(precision)`
+
+  > 返回指定有效数字个数的数值字符串形式
+  >
+  > `precision`  有效数字的个数
+  >
+  > 注意：此方法会对后一位进行 **四舍五入** 再取值
+
 - `Number.valueOf()`
+
+  > 直接返回数字原始值
