@@ -1,6 +1,6 @@
 ## 浏览器相关 API
 
-所谓的 BOM，Browser Object Model，浏览器对象模型
+所谓的 BOM，Browser Object Model，浏览器对象模型，包含了一系列浏览器相关，以及环境相关的 API
 
 
 
