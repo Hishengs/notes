@@ -1,0 +1,1 @@
+最简单的闭包就是 IIFE （Imediatly Invoke Function Expression，函数表达式立即调用）。
