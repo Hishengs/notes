@@ -13,3 +13,4 @@
 ### 服务器告知哪些域名可以发起 CORS 请求
 
 通过设置 [`Access-Control-Allow-Origin`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) 告知可以跨域的域名，`Access-Control-Allow-Origin` 应当为 * 或者包含由 Origin 首部字段所指明的域名。为 * 表示允许任何外域访问。
+
