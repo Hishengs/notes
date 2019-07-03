@@ -43,3 +43,5 @@
 [1] [《算法复杂度和大O表示法》](<http://www.moye.me/2017/01/15/analysis-of-algorithm/>)
 
 [2] [《JavaScript 算法之复杂度分析》](<https://juejin.im/post/5c2a1d9d6fb9a04a0f654581>)
+
+[3] hustcc, Github, [JS-Sorting-Algorithm](<https://github.com/hustcc/JS-Sorting-Algorithm>)
