@@ -1,2 +1,59 @@
-![å¨è¿éæå¥å¾çæè¿°](https://user-gold-cdn.xitu.io/2018/11/16/1671bc56731bf8a8?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+- GET 在浏览器回退时是无害的，而 POST 会再次提交请求。
 
+  
+
+- GET 产生的 URL 地址可以被 Bookmark，而 POST 不可以。
+
+  
+
+- GET 请求会被浏览器主动 cache，而 POST 不会，除非手动设置。
+
+  
+
+- GET 请求只能进行 url 编码，而 POST 支持多种编码方式。
+
+  
+
+- GET 请求参数会被完整保留在浏览器历史记录里，而 POST 中的参数不会被保留。
+
+  
+
+- GET 请求在 URL 中传送的参数是有长度限制的，而 POST 没有。
+
+  > （大多数）浏览器通常都会限制 url 长度在 2K 个字节，而（大多数）服务器最多处理 64K 大小的 url
+
+  
+
+- 对参数的数据类型，GET 只接受 ASCII 字符，而 POST 没有限制。
+
+  
+
+- GET 比 POST 更不安全，因为参数直接暴露在 URL 上，所以不能用来传递敏感信息。
+
+  
+
+- GET 参数通过 URL 传递，POST 放在 Request body 中。
+
+
+
+**GET 和 POST 还有一个重大区别：**
+
+
+
+GET 产生一个 TCP 数据包，POST 产生两个 TCP 数据包。
+
+
+
+对于 GET 方式的请求，浏览器会把 http header 和 data 一并发送出去，服务器响应 200（返回数据）；
+
+而对于 POST，浏览器先发送 header，服务器响应 100 continue，浏览器再发送 data，服务器响应 200 ok（返回数据）。
+
+
+
+> 并不是所有浏览器都会在 POST 中发送两次包，Firefox 就只发送一次
+
+
+
+## 参考
+
+[1] [《99%的人都理解错了HTTP中GET与POST的区别》](<https://mp.weixin.qq.com/s?__biz=MzI3NzIzMzg3Mw==&mid=100000054&idx=1&sn=71f6c214f3833d9ca20b9f7dcd9d33e4>)

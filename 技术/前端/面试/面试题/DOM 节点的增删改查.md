@@ -1,15 +1,16 @@
 ### 增
 
-- `element.createElement()`
-- `element.createTextNode()`
-- `element.appendChild()`
-- `element.insertBefore()`
+- `document.createElement()`
+- `document.createTextNode()`
+- `Node.prototype.appendChild()`
+- `Node.prototype.insertBefore(newNode, referenceNode)`
 
 
 
 ### 删
 
-- `element.removeChild(Node)`
+- `Node.prototype.removeChild(Node)`
+- `Node.prototype.replaceChild(newChild, oldChild)`
 
 
 
