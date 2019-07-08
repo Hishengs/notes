@@ -23,6 +23,8 @@
 
 ### 查
 
+- `element.previousSibling` 或者 `element.previousElementSibling`
+- `element.nextSibling` 或者 `element.nextElementSibling`
 - `document.querySelector()`
 - `document.querySelectorAll()`
 - `document.getElementById()`
