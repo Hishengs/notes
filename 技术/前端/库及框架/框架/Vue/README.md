@@ -103,7 +103,7 @@ export function initMixin (Vue: Class<Component>) {
     initInjections(vm) // resolve injections before data/props 看不出（？）
     initState(vm)       // 初始化 state
     initProvide(vm) // resolve provide after data/props 看不出（？）
-    callHook(vm, 'created')     // 触发 created 周期
+    callHook(vm, 'created')     // 触发 created        周期
 
     /* istanbul ignore if */
     if (process.env.NODE_ENV !== 'production' && config.performance && mark) {
