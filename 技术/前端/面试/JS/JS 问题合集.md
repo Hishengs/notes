@@ -1,5 +1,7 @@
 # JS 面试问题合集
 
+[JS 面试知识点总结](https://github.com/CavsZhouyou/Front-End-Interview-Notebook/blob/master/JavaScript/JavaScript.md)
+
 
 
 **=> JS 有哪些数据类型**
