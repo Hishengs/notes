@@ -89,3 +89,12 @@ User(); // undefined
 new User(); // function User { ... }
 ```
 
+
+
+$8
+
+`setTimeout` 和 `setInterval` 都支持额外参数用于向延迟执行的函数传参：
+
+`let timerId = setTimeout(func|code, [delay], [arg1], [arg2], ...)`
+
+`let timerId = setInterval(func|code, [delay], [arg1], [arg2], ...)`
