@@ -8,8 +8,23 @@ DOM 并不是一门编程语言，只是一个对文档操作的标准规范，�
 
 
 
+> **DOM 不仅仅用于浏览器**
+>
+> DOM 规范解释了文档的结构，并提供了操作文档的对象。有的非浏览器设备也使用 DOM。
+>
+> 例如，下载 HTML 文件并对其进行处理的服务器端脚本也可以使用 DOM。但它们可能仅支持部分规范中的内容。
+
+
+
 ## DOM 级别
 
 DOM级别一共可以分为4个级别：DOM0级，DOM1级，DOM2级和 DOM3级，而DOM事件分为3个级别：DOM0级事件处理，DOM2级事件处理和DOM3级事件处理。如下图所示：
 
 ![img](https://lc-api-gold-cdn.xitu.io/2c5c37e4682cda489798?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+
+
+
+## DOM 规范
+
+https://dom.spec.whatwg.org/
+

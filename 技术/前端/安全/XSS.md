@@ -16,3 +16,5 @@
 
 [前端安全系列（一）：如何防止XSS攻击？](https://juejin.im/post/5bad9140e51d450e935c6d64)
 
+[常见六大Web安全攻防解析](https://blog.fundebug.com/2019/02/01/details-about-6-web-security/)
+
