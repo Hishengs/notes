@@ -254,3 +254,18 @@ XPromise.race = function (promises) {
 module.exports = XPromise;
 ```
 
+
+
+### 注意点
+
+`catch` 和 `finally` return 的返回值不会传递给接下来的 `then`，`then` 会直接忽略这两个方法的返回值，而使用最近上一个 `then` 的返回值
+
+```js
+Promise.resolve('hello')
+  .then(val => val)
+  .catch(() => { return 'Hisheng'; })
+  .then(val => console.log(val))
+
+// hello
+```
+
