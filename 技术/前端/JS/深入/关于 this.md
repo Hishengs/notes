@@ -56,7 +56,9 @@
 
   > 数组方法 `map`，`foreach` 等方法内  this 指向全局顶层对象 window（浏览器环境），不管是不是在对象方法内调用
   >
-  > 同样，严格模式下，this 为 `undefined
+  > 同样，严格模式下，this 为 `undefined`
+  >
+  > 不过，多数数组方法都是可以指定 this 的：[Array.prototype.map](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 
 
