@@ -41,7 +41,7 @@ Function.prototype.apply = function (ctx, args) {
 **bind**
 
 ```js
-Function.prototype.apply = function (ctx, ...args) {
+Function.prototype.bind = function (ctx, ...args) {
     // 防止传进来的是空
     ctx = ctx || window;
     const fn = this; 
