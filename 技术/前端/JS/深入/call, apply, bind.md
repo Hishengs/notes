@@ -5,7 +5,7 @@
 ```js
 Function.prototype.call = function (ctx, ...args) {
     // 防止传进来的是空
-    ctx = ctx || window;
+    ctx = ctx == undefined ? window : ctx;
     const fn = this;
     // 绑定一个临时的函数
     ctx.fn = fn;
@@ -25,7 +25,7 @@ Function.prototype.call = function (ctx, ...args) {
 ```js
 Function.prototype.apply = function (ctx, args) {
     // 防止传进来的是空
-    ctx = ctx || window;
+    ctx = ctx == undefined ? window : ctx;
     const fn = this;
     // 绑定一个临时的函数
     ctx.fn = fn;
@@ -43,9 +43,9 @@ Function.prototype.apply = function (ctx, args) {
 ```js
 Function.prototype.bind = function (ctx, ...args) {
     // 防止传进来的是空
-    ctx = ctx || window;
+    ctx = ctx == undefined ? window : ctx;
     const fn = this; 
-    return function (...args1) {
+    const newFn = function (...args1) {
         // 绑定一个临时的函数
         ctx.fn = fn;
         // 以对象方法的方式执行函数
@@ -55,6 +55,9 @@ Function.prototype.bind = function (ctx, ...args) {
         // 返回结果
         return result;
     }
+    // 绑定 prototype
+    newFn.prototype = Object.create(fn.prototype);
+    return newFn;
 }
 ```
 
